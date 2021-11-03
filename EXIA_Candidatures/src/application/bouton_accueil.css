@@ -1,0 +1,198 @@
+/* style="-fx-background-color: linear-gradient(white, #478BA2)"   */
+
+#btn_prospects {
+	
+	-fx-pref-height: 250.0px;
+    -fx-pref-width: 182.0px;
+    
+	-fx-background-radius: 20,40;
+	-fx-background-color: white;
+	-fx-background-image: url(client.png);
+    -fx-background-size: 100px 100px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-border-color:transparent;
+    -fx-background-insets: 0;
+    -fx-effect: dropshadow(two-pass-box, #b4b4b4, 10, 0, 0, 0);
+   
+    -fx-font-size: 16px;
+    -fx-text-fill: #6ca0ce;
+}
+
+#btn_prospects:hover {
+	-fx-font-weight: bold;
+	
+	-fx-border-color: #6ca0ce ;
+	-fx-border-radius : 20,40;
+	-fx-border-width: 2px;
+	
+	-fx-pref-height: 270.0px;
+    -fx-pref-width: 198.0px;
+    -fx-effect: dropshadow(two-pass-box, #b4b4b4, 15, 0, 0, 0);
+}
+
+#btn_candidats {
+	
+	-fx-pref-height: 250.0px;
+    -fx-pref-width: 182.0px;
+    
+	-fx-background-radius: 20,40;
+	-fx-background-color: white;
+	-fx-background-image: url(candidates.png);
+    -fx-background-size: 100px 100px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-border-color:transparent;
+    -fx-background-insets: 0;
+    -fx-effect: dropshadow(two-pass-box, #b4b4b4, 10, 0, 0, 0);
+    
+    -fx-font-size: 16px; 
+    -fx-text-fill: #6ca0ce;
+}
+
+#btn_candidats:hover {
+	-fx-font-weight: bold;
+	
+	-fx-border-color: #6ca0ce ;
+	-fx-border-radius : 20,40;
+	-fx-border-width: 2px;
+	
+	-fx-pref-height: 270.0px;
+    -fx-pref-width: 198.0px;
+    -fx-effect: dropshadow(two-pass-box, #b4b4b4, 15, 0, 0, 0);
+}
+
+
+#btn_tests {
+	
+	-fx-pref-height: 250.0px;
+    -fx-pref-width: 182.0px;
+    
+	-fx-background-radius: 20,40;
+	-fx-background-color: white;
+	-fx-background-image: url(checklist.png);
+    -fx-background-size: 100px 100px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-border-color:transparent;
+    -fx-background-insets: 0;
+    -fx-effect: dropshadow(two-pass-box, #b4b4b4, 10, 0, 0, 0);
+    
+    -fx-font-size: 16px;
+    -fx-text-fill: #6ca0ce;
+}
+
+#btn_tests:hover {
+	-fx-font-weight: bold;
+	
+	-fx-border-color: #6ca0ce ;
+	-fx-border-radius : 20,40;
+	-fx-border-width: 2px;
+	
+	-fx-pref-height: 270.0px;
+    -fx-pref-width: 198.0px;
+    -fx-effect: dropshadow(two-pass-box, #b4b4b4, 15, 0, 0, 0);
+}
+
+/************ Tool bare's buttons ***************/
+
+#menu {
+	-fx-background-color: #89b3d7;
+	-fx-effect: dropshadow(two-pass-box, #b4b4b4, 5, 0, 0, 0);
+}
+
+#btn_logout {
+	
+    -fx-pref-height: 27.0px;
+    -fx-pref-width: 30.0px;
+    
+	-fx-background-radius: 1,2;
+	-fx-background-color: transparent;
+	-fx-background-image: url(logout.png);
+    -fx-background-size: 30px 30px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    /*-fx-border-color:transparent;*/
+    -fx-background-insets: 0;
+    -fx-effect: dropshadow(two-pass-box, #b4b4b4, 10, 0, 0, 0);
+   
+}
+
+#btn_logout:hover {
+	
+	-fx-background-color: #6ca0ce;
+	-fx-pref-height: 27.0px;
+    -fx-pref-width: 27.0px;
+    -fx-effect: dropshadow(two-pass-box, #40607b, 10, 0, 0, 0);
+}
+#btn_stat {
+	
+	-fx-pref-height: 27.0px;
+    -fx-pref-width: 27.0px;
+    
+	-fx-background-radius: 1,2;
+	-fx-background-color: transparent;
+	-fx-background-image: url(stats.png);
+    -fx-background-size: 25px 25px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    /*-fx-border-color:transparent;*/
+    -fx-background-insets: 0;
+    -fx-effect: dropshadow(two-pass-box, #b4b4b4, 10, 0, 0, 0);
+   
+}
+#btn_stat:hover {
+	
+    -fx-background-color: #6ca0ce;
+	-fx-pref-height: 27.0px;
+    -fx-pref-width: 27.0px;
+    -fx-effect: dropshadow(two-pass-box, #40607b, 10, 0, 0, 0);
+}
+
+#btn_calendrier {
+	
+	-fx-pref-height: 27.0px;
+    -fx-pref-width: 27.0px;
+    
+	-fx-background-radius: 1,2;
+	-fx-background-color: transparent;
+	-fx-background-image: url(event.png);
+    -fx-background-size: 24px 25px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    /*-fx-border-color:transparent;*/
+    -fx-background-insets: 0;
+    -fx-effect: dropshadow(two-pass-box, #b4b4b4, 10, 0, 0, 0);
+   
+}
+#btn_calendrier:hover {
+	
+	-fx-background-color: #6ca0ce;
+	-fx-pref-height: 27.0px;
+    -fx-pref-width: 27.0px;
+    -fx-effect: dropshadow(two-pass-box, #40607b, 10, 0, 0, 0);
+}
+
+#btn_parametres {
+	
+	-fx-pref-height: 27.0px;
+    -fx-pref-width: 27.0px;
+    
+	-fx-background-radius: 1,2;
+	-fx-background-color: transparent;
+	-fx-background-image: url(settings.png);
+    -fx-background-size: 23px 23px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    /*-fx-border-color:transparent;*/
+    -fx-background-insets: 0;
+    -fx-effect: dropshadow(two-pass-box, #b4b4b4, 10, 0, 0, 0);
+   
+}
+#btn_parametres:hover {
+	
+	-fx-background-color: #6ca0ce;
+	-fx-pref-height: 27.0px;
+    -fx-pref-width: 27.0px;
+    -fx-effect: dropshadow(two-pass-box, #40607b, 10, 0, 0, 0);
+}
