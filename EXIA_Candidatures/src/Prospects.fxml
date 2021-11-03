@@ -5,13 +5,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" style="-fx-background-image: url('file:C:/Users/ALIANE/Downloads/blue.jpg')" styleClass="list-cell" stylesheets="@application/test.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControllerProspects">
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControllerProspects">
    <children>
       <Label fx:id="ProspectsLabel" alignment="TOP_LEFT" layoutX="60.0" layoutY="20.0" prefHeight="57.0" prefWidth="470.0" text="Prospects">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-       <ListView fx:id="ProspectsListView" layoutX="60.0" layoutY="80.0" opacity="0.88" prefHeight="366.0" prefWidth="470.0" />
+       <ListView fx:id="ProspectsListView" layoutX="60.0" layoutY="80.0" opacity="0.88" prefHeight="366.0" prefWidth="470.0" stylesheets="@application/test.css" />
    </children>
 </AnchorPane>

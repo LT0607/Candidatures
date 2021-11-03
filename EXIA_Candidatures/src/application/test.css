@@ -1,18 +1,32 @@
-.list-cell {
+#ProspectsListView {
+	-fx-background-color: transparent ;
+	-fx-background-insets: 0px;
+	-fx-padding: 0px ;
+}
+ .list-cell {
     -fx-pref-height: 40;
     -fx-opacity: 0.95;
+    /*-fx-background-color: #89b3d7;*/
+    -fx-border-width: 2px;
+    
 }
 
 .list-cell:filled:selected:focused, .list-cell:filled:selected {
     -fx-background-color: linear-gradient(#bedddb 0%, #aed5d2 25%, #9dccc9 75%, #8dc4c0 100%);
-    -fx-text-fill: #188781;
+    -fx-text-fill: #4b7090;
    }
 
 
 .list-cell:filled:hover {
-    -fx-cell-hover-color: #5daba6;
-    -fx-text-fill: #188781;
-    -fx-background-color: #9dccc9;
+   
+    -fx-text-fill: #4b7090;
+    -fx-background-color: #89b3d7;
     -fx-pref-height: 50;
     
+}
+
+.list-cell:empty {
+    
+    -fx-background-color: transparent ;
+    -fx-background-insets: 0 ;
 }
