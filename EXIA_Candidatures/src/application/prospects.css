@@ -1,0 +1,66 @@
+#ProspectsLabel {
+	-fx-text-fill: #6ca0ce;
+	-fx-font-size: 25px;
+}
+#btn_retour_prospects {
+	-fx-pref-height: 30.0px;
+    -fx-pref-width: 30.0px;
+	-fx-background-image: url(undo.png);
+	-fx-background-size: 25px 25px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-border-color:transparent;
+    -fx-background-insets: 0;
+    -fx-background-color: transparent;
+}
+#btn_retour_prospects:hover {
+ -fx-effect: dropshadow(two-pass-box, #b4b4b4, 10, 0, 0, 0);
+ }
+#ProspectsListView {
+	-fx-background-color: transparent ;
+	-fx-background-insets: 0px;
+	-fx-padding: 0px ;
+}
+ .list-cell {
+    -fx-pref-height: 55;
+    /*-fx-background-color: #89b3d7;*/
+    -fx-border-width: 2px;
+    -fx-effect: dropshadow(two-pass-box, #b4b4b4, 10, 0, 0, 0);
+    -fx-font-size: 15px;
+}
+
+.list-cell:filled:selected:focused, .list-cell:filled:selected {
+    -fx-background-color: linear-gradient(#98bcdc 0%, #a6c6e1 25%, #b5cfe6 75%, #c4d9eb 100%);
+    -fx-text-fill: #4b7090;
+    
+   }
+
+
+.list-cell:filled:hover {
+    -fx-font-size: 16px;
+    -fx-text-fill: #4b7090;
+    /*-fx-background-color: #89b3d7;*/
+    -fx-pref-height: 60;
+    -fx-border-color: #6ca0ce ;
+    -fx-border-radius : 4,7;
+}
+
+.list-cell:empty {
+    
+    -fx-background-color: transparent ;
+    -fx-background-insets: 0 ;
+}
+#btn_ajout_prospect{
+	-fx-font-size: 15px;
+    -fx-text-fill: #6ca0ce;
+    -fx-font-weight: bold;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent ;
+}
+#btn_supprimer_prospect{
+	-fx-font-size: 15px;
+    -fx-text-fill: #6ca0ce;
+    -fx-font-weight: bold;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent ;
+}

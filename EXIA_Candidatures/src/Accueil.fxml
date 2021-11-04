@@ -3,6 +3,7 @@
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.effect.ColorAdjust?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
@@ -34,12 +35,17 @@
             </Button>
             <ToolBar fx:id="menu" prefHeight="34.0" prefWidth="800.0" stylesheets="@application/bouton_accueil.css">
               <items>
-                <Button fx:id="btn_stat" alignment="CENTER" mnemonicParsing="false" stylesheets="@application/bouton_accueil.css" />
-                  <Button fx:id="btn_calendrier" alignment="CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" stylesheets="@application/bouton_accueil.css" />
-                  <Button fx:id="btn_parametres" alignment="CENTER" layoutX="66.0" layoutY="10.0" mnemonicParsing="false" stylesheets="@application/bouton_accueil.css" />
-                  <Button fx:id="btn_logout" alignment="CENTER" layoutX="66.0" layoutY="10.0" mnemonicParsing="false" stylesheets="@application/bouton_accueil.css" />
+                <Button fx:id="btn_stat" alignment="CENTER" mnemonicParsing="false" stylesheets="@application/bouton_accueil.css" text="Statistiques" />
+                  <Button fx:id="btn_calendrier" alignment="CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" stylesheets="@application/bouton_accueil.css" text="Calendrier" />
+                  <Button fx:id="btn_parametres" alignment="CENTER" layoutX="66.0" layoutY="10.0" mnemonicParsing="false" stylesheets="@application/bouton_accueil.css" text="Paramètres" />
+                  <Button fx:id="btn_logout" alignment="CENTER" layoutX="66.0" layoutY="10.0" mnemonicParsing="false" stylesheets="@application/bouton_accueil.css" text="Déconnexion" />
               </items>
             </ToolBar>
+            <Button fx:id="btn_nv_test" layoutX="532.0" layoutY="478.0" mnemonicParsing="false" stylesheets="@application/bouton_accueil.css" text="+ Nouveau test d'admission" />
+            <Button fx:id="btn_nv_prospect" layoutX="586.0" layoutY="511.0" mnemonicParsing="false" stylesheets="@application/bouton_accueil.css" text="+ Nouveau propsect">
+               <effect>
+                  <ColorAdjust />
+               </effect></Button>
          </children>
       </AnchorPane>
    </children>

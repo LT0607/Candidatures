@@ -94,6 +94,29 @@
     -fx-effect: dropshadow(two-pass-box, #b4b4b4, 15, 0, 0, 0);
 }
 
+#btn_nv_test {
+	
+	-fx-font-size: 15px;
+    -fx-text-fill: #6ca0ce;
+    -fx-font-weight: bold;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent ;
+}
+#btn_nv_test:hover {
+	
+	-fx-font-size: 16px; 
+}
+#btn_nv_prospect {
+	-fx-font-weight: bold;
+	-fx-font-size: 15px;
+    -fx-text-fill: #6ca0ce;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent ;
+}
+#btn_nv_prospect:hover {
+	
+	-fx-font-size: 16px; 
+}
 /************ Tool bare's buttons ***************/
 
 #menu {
@@ -104,83 +127,92 @@
 #btn_logout {
 	
     -fx-pref-height: 27.0px;
-    -fx-pref-width: 30.0px;
+    -fx-pref-width: 120.0px;
     
 	-fx-background-radius: 1,2;
 	-fx-background-color: transparent;
-	-fx-background-image: url(logout.png);
+	/*-fx-background-image: url(logout.png);*/
     -fx-background-size: 30px 30px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
     /*-fx-border-color:transparent;*/
     -fx-background-insets: 0;
     -fx-effect: dropshadow(two-pass-box, #b4b4b4, 10, 0, 0, 0);
-   
+    
+    -fx-font-size: 15px;
+    -fx-text-fill: white;
 }
 
 #btn_logout:hover {
-	
+	-fx-font-weight: bold;
 	-fx-background-color: #6ca0ce;
 	-fx-pref-height: 27.0px;
-    -fx-pref-width: 27.0px;
+    -fx-pref-width: 120.0px;
     -fx-effect: dropshadow(two-pass-box, #40607b, 10, 0, 0, 0);
 }
 #btn_stat {
 	
 	-fx-pref-height: 27.0px;
-    -fx-pref-width: 27.0px;
+    -fx-pref-width: 120.0px;
     
 	-fx-background-radius: 1,2;
 	-fx-background-color: transparent;
-	-fx-background-image: url(stats.png);
+	/*-fx-background-image: url(stats.png);*/
     -fx-background-size: 25px 25px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
     /*-fx-border-color:transparent;*/
     -fx-background-insets: 0;
     -fx-effect: dropshadow(two-pass-box, #b4b4b4, 10, 0, 0, 0);
+    
+     -fx-font-size: 15px;
+    -fx-text-fill: white;
+   
    
 }
 #btn_stat:hover {
-	
+	-fx-font-weight: bold;
     -fx-background-color: #6ca0ce;
 	-fx-pref-height: 27.0px;
-    -fx-pref-width: 27.0px;
+    -fx-pref-width: 120.0px;
     -fx-effect: dropshadow(two-pass-box, #40607b, 10, 0, 0, 0);
 }
 
 #btn_calendrier {
 	
 	-fx-pref-height: 27.0px;
-    -fx-pref-width: 27.0px;
+    -fx-pref-width: 120.0px;
     
 	-fx-background-radius: 1,2;
 	-fx-background-color: transparent;
-	-fx-background-image: url(event.png);
+	/*-fx-background-image: url(event.png);*/
     -fx-background-size: 24px 25px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
     /*-fx-border-color:transparent;*/
     -fx-background-insets: 0;
     -fx-effect: dropshadow(two-pass-box, #b4b4b4, 10, 0, 0, 0);
+    
+    -fx-font-size: 15px;
+    -fx-text-fill: white;
    
 }
 #btn_calendrier:hover {
-	
+	-fx-font-weight: bold;
 	-fx-background-color: #6ca0ce;
 	-fx-pref-height: 27.0px;
-    -fx-pref-width: 27.0px;
+    -fx-pref-width: 120.0px;
     -fx-effect: dropshadow(two-pass-box, #40607b, 10, 0, 0, 0);
 }
 
 #btn_parametres {
 	
 	-fx-pref-height: 27.0px;
-    -fx-pref-width: 27.0px;
+    -fx-pref-width: 120.0px;
     
 	-fx-background-radius: 1,2;
 	-fx-background-color: transparent;
-	-fx-background-image: url(settings.png);
+	/*-fx-background-image: url(settings.png);*/
     -fx-background-size: 23px 23px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
@@ -188,11 +220,13 @@
     -fx-background-insets: 0;
     -fx-effect: dropshadow(two-pass-box, #b4b4b4, 10, 0, 0, 0);
    
+    -fx-font-size: 15px;
+    -fx-text-fill: white;
 }
 #btn_parametres:hover {
-	
+	-fx-font-weight: bold;
 	-fx-background-color: #6ca0ce;
 	-fx-pref-height: 27.0px;
-    -fx-pref-width: 27.0px;
+    -fx-pref-width: 120.0px;
     -fx-effect: dropshadow(two-pass-box, #40607b, 10, 0, 0, 0);
 }
