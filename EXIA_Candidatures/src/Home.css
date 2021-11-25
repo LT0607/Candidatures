@@ -1,0 +1,197 @@
+#id_hbox_menu {
+	-fx-background-color: #6454F0;
+}
+#id_btn_login{
+	-fx-pref-height: 35px;
+    -fx-pref-width: 35px; 
+    
+	-fx-background-color: transparent;
+	-fx-background-image: url(logout1_w.png);
+    -fx-background-size: 21px 21px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-border-color:transparent;
+    -fx-background-insets: 0;
+    -fx-effect: dropshadow(two-pass-box, #b4b4b4, 10, 0, 0, 0);
+   
+}
+#id_btn_login:hover{
+	-fx-border-color: white ;
+	-fx-border-radius : 20,40;
+	-fx-effect: dropshadow(two-pass-box, white, 15, 0, 0, 0);
+}
+#id_btn_parametre{
+	-fx-pref-height: 35px;
+    -fx-pref-width: 35px;
+    
+	-fx-background-color: transparent;
+	-fx-background-image: url(settings_w.png); 
+    -fx-background-size: 23px 23px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-border-color:transparent;
+    -fx-background-insets: 0;
+    -fx-effect: dropshadow(two-pass-box, #b4b4b4, 10, 0, 0, 0);
+   
+}
+#id_btn_parametre:hover{
+	-fx-border-color: white ;
+	-fx-border-radius : 20,40;
+	-fx-effect: dropshadow(two-pass-box, white, 15, 0, 0, 0);
+}
+#id_btn_stat{
+	-fx-pref-height: 35px;
+    -fx-pref-width: 35px;
+    
+	-fx-background-color: transparent;
+	-fx-background-image: url(stats_w.png);  
+    -fx-background-size: 20px 20px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-border-color:transparent;
+    -fx-background-insets: 0;
+    -fx-effect: dropshadow(two-pass-box, #b4b4b4, 10, 0, 0, 0);
+   
+}
+#id_btn_stat:hover{
+	-fx-border-color: white ;
+	-fx-border-radius : 20,40;
+	-fx-effect: dropshadow(two-pass-box, white, 15, 0, 0, 0);
+}
+#id_btn_prospects{
+	
+	-fx-pref-height: 180px; 
+    -fx-pref-width: 150px;
+    
+	-fx-background-radius: 15,30;
+	-fx-background-color: linear-gradient(#00FFED, #0088BA);
+
+	-fx-background-image: url(search_w.png);
+    -fx-background-size: 50px 50px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-border-color:transparent;
+    -fx-background-insets: 0;
+   
+   
+    -fx-font-size: 14px;
+    -fx-text-fill: white;
+}
+#id_btn_prospects:hover{
+	-fx-pref-height: 185px; 
+    -fx-pref-width: 155px;
+   
+}
+#id_btn_candidats{
+	
+	-fx-pref-height: 180px; 
+    -fx-pref-width: 150px;
+    
+	-fx-background-radius: 15,30;
+	-fx-background-color: linear-gradient(#6EE2F5, #6454F0);
+	-fx-background-image: url(c_w.png);
+    -fx-background-size: 50px 50px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-border-color:transparent;
+    -fx-background-insets: 0;
+   
+   
+    -fx-font-size: 14px;
+    -fx-text-fill: white;
+}
+#id_btn_candidats:hover{
+	-fx-pref-height: 185px; 
+    -fx-pref-width: 155px;
+    
+}
+#id_btn_tests{
+	
+	-fx-pref-height: 180px; 
+    -fx-pref-width: 150px;
+    
+	-fx-background-radius: 15,30;
+	-fx-background-color: linear-gradient(#F869D5, #5650DE);
+	-fx-background-image: url(test_w.png);
+    -fx-background-size: 50px 50px; 
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-border-color:transparent;
+    -fx-background-insets: 0;
+  
+   
+    -fx-font-size: 14px;
+    -fx-text-fill: white;
+}
+#id_btn_tests:hover{
+	-fx-pref-height: 185px; 
+    -fx-pref-width: 155px;
+    
+}
+#id_hbox_img{
+	-fx-background-image: url(img1.jpg);
+	-fx-background-size: 350px 280px; 
+	-fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+/******************menu page prospects **************** */
+#id_hbox_1_p2{
+	-fx-background-color: #6454F0;
+}
+#id_btn_login_1{
+	-fx-pref-height: 35px;
+    -fx-pref-width: 35px; 
+    
+	-fx-background-color: transparent;
+	-fx-background-image: url(logout1_w.png);
+    -fx-background-size: 21px 21px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-border-color:transparent;
+    -fx-background-insets: 0;
+    -fx-effect: dropshadow(two-pass-box, #b4b4b4, 10, 0, 0, 0);
+   
+}
+#id_btn_login_1:hover{
+	-fx-border-color: white ;
+	-fx-border-radius : 20,40;
+	-fx-effect: dropshadow(two-pass-box, white, 15, 0, 0, 0);
+}
+#id_btn_parametre_1{
+	-fx-pref-height: 35px;
+    -fx-pref-width: 35px;
+    
+	-fx-background-color: transparent;
+	-fx-background-image: url(settings_w.png); 
+    -fx-background-size: 23px 23px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-border-color:transparent;
+    -fx-background-insets: 0;
+    -fx-effect: dropshadow(two-pass-box, #b4b4b4, 10, 0, 0, 0);
+   
+}
+#id_btn_parametre_1:hover{
+	-fx-border-color: white ;
+	-fx-border-radius : 20,40;
+	-fx-effect: dropshadow(two-pass-box, white, 15, 0, 0, 0);
+}
+#id_btn_stat_1{
+	-fx-pref-height: 35px;
+    -fx-pref-width: 35px;
+    
+	-fx-background-color: transparent;
+	-fx-background-image: url(stats_w.png);  
+    -fx-background-size: 20px 20px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-border-color:transparent;
+    -fx-background-insets: 0;
+    -fx-effect: dropshadow(two-pass-box, #b4b4b4, 10, 0, 0, 0);
+   
+}
+#id_btn_stat_1:hover{
+	-fx-border-color: white ;
+	-fx-border-radius : 20,40;
+	-fx-effect: dropshadow(two-pass-box, white, 15, 0, 0, 0);
+}

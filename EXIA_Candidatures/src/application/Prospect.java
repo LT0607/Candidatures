@@ -106,15 +106,15 @@ public class Prospect {
    
 	/******************Methods****************/
     
-	public void RechercherProspect() {
+	public void RechercherProspect(String nom, String prenom) {
 		
 	}
 	
-	public void ModifierProspect() {
+	public void ModifierProspect(String nom, String prenom) {
 		
 	}
 	
-	public void SupprimerProspect() {
+	public void SupprimerProspect(String nom, String prenom) {
 		
 	}
 

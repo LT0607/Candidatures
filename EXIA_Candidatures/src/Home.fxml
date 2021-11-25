@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControllerScene">
+   <children>
+      <BorderPane prefHeight="562.0" prefWidth="781.0">
+         <center>
+            <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox fx:id="id_hbox_menu" prefHeight="584.0" prefWidth="75.0" spacing="20.0" stylesheets="@Home.css">
+                     <children>
+                        <Button fx:id="id_btn_login" alignment="CENTER" mnemonicParsing="false" stylesheets="@Home.css">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Button>
+                        <Button fx:id="id_btn_parametre" mnemonicParsing="false" stylesheets="@Home.css" />
+                        <Button fx:id="id_btn_stat" mnemonicParsing="false" stylesheets="@Home.css" />
+                     </children>
+                     <padding>
+                        <Insets left="10.0" top="30.0" />
+                     </padding>
+                  </VBox>
+                  <VBox fx:id="id_hbox1" prefHeight="562.0" prefWidth="421.0" spacing="10.0" style="-fx-background-color: white;" stylesheets="@Home.css">
+                     <children>
+                        <HBox prefHeight="82.0" prefWidth="418.0" stylesheets="@Home.css">
+                           <children>
+                              <TextField prefHeight="25.0" prefWidth="268.0" promptText="Recherche" stylesheets="@Home.css">
+                                 <HBox.margin>
+                                    <Insets left="25.0" top="25.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="232.0" prefWidth="418.0" spacing="15.0" stylesheets="@Home.css">
+                           <children>
+                              <Button fx:id="id_btn_prospects" alignment="BOTTOM_CENTER" mnemonicParsing="false" prefHeight="187.0" prefWidth="99.0" onAction="#SwitchToProspects" stylesheets="@Home.css" text="Prospects">
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="id_btn_candidats" alignment="BOTTOM_CENTER" mnemonicParsing="false" prefHeight="186.0" prefWidth="95.0" stylesheets="@Home.css" text="Candidats">
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="id_btn_tests" alignment="BOTTOM_CENTER" mnemonicParsing="false" prefHeight="187.0" prefWidth="94.0" stylesheets="@Home.css" text="Tests">
+                                 <HBox.margin>
+                                    <Insets right="25.0" top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="25.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox fx:id="id_hbox_img" prefHeight="271.0" prefWidth="418.0" stylesheets="@Home.css" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="562.0" prefWidth="290.0" style="-fx-background-color: white;" stylesheets="@Home.css" />
+               </children>
+            </HBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

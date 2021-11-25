@@ -26,7 +26,7 @@ public class ControllerScene {
 	
 	public void SwitchToProspects(ActionEvent event ) throws IOException {
 		
-	root = FXMLLoader.load(getClass().getResource("/Prospects.fxml"));
+	root = FXMLLoader.load(getClass().getResource("/Prospects3.fxml"));
 		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		scene = new Scene(root);
 		stage.setScene(scene);
@@ -34,6 +34,24 @@ public class ControllerScene {
 		
 	}
 
-
+	public void SwitchToCandidats(ActionEvent event ) throws IOException {
+		
+		root = FXMLLoader.load(getClass().getResource("/Prospects.fxml"));
+			stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+			scene = new Scene(root);
+			stage.setScene(scene);
+			stage.show();
+			
+		}
+	
+	public void SwitchToTests(ActionEvent event ) throws IOException {
+		
+		root = FXMLLoader.load(getClass().getResource("/Prospects.fxml"));
+			stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+			scene = new Scene(root);
+			stage.setScene(scene);
+			stage.show();
+			
+		}
 	
 }

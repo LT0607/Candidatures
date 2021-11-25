@@ -11,17 +11,17 @@ import javafx.scene.control.ListView;
 public class ControllerProspects implements Initializable {
 
 	@FXML
-	private ListView<String> ProspectsListView;
+	private ListView<String> id_listview_prospects;
 	
 	@FXML
 	private Label ProspectsLabel;
 	
-	String[] Prospects = {"prospects1", "prospects2", "prospects3"};
+	String[] Prospects = {"prospects1", "prospects2", "prospects3", "prospects4"};
 	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		
-		ProspectsListView.getItems().addAll(Prospects);
+		id_listview_prospects.getItems().addAll(Prospects);
 		
 	}
 
