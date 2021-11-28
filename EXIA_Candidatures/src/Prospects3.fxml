@@ -35,7 +35,7 @@
                                     <Image url="@../../../../Pictures/icones/64e5d5b490267d0507922f0fbf9afe52.png" />
                                  </image>
                               </ImageView>
-                              <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#6454f0" height="34.0" layoutX="119.0" layoutY="95.0" strokeType="INSIDE" width="231.0" />
+                              <Rectangle fx:id="id_label_prospects" arcHeight="20.0" arcWidth="20.0" fill="#6454f0" height="34.0" layoutX="119.0" layoutY="95.0" strokeType="INSIDE" width="231.0" />
                               <Text fill="WHITE" layoutX="127.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A la conquête des prospects !" wrappingWidth="216.13671875">
                                  <font>
                                     <Font size="16.0" />
@@ -51,7 +51,7 @@
                               <Insets left="15.0" right="15.0" />
                            </VBox.margin></ListView>
                      </children></VBox>
-                  <VBox prefHeight="562.0" prefWidth="326.0" style="-fx-background-color: white;" stylesheets="@Home.css">
+                  <VBox fx:id="id_label_prospects" prefHeight="562.0" prefWidth="326.0" style="-fx-background-color: white;" stylesheets="@Home.css">
                      <HBox.margin>
                         <Insets />
                      </HBox.margin></VBox>
