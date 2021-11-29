@@ -10,7 +10,7 @@ public class Connexion {
 	    static String user = "root";
 	    static String url = "jdbc:mysql://localhost/exia";
 	    static String pass = "password";
-	    static String driver = "com.mysql.jdbc.Driver";
+	    static String driver = "com.mysql.cj.jdbc.Driver";
 	 
 	    public static Connection getCon() {
 	        Connection con = null;

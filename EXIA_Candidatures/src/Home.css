@@ -61,7 +61,7 @@
 #id_btn_prospects{
 	
 	-fx-pref-height: 180px; 
-    -fx-pref-width: 150px;
+    -fx-pref-width: 130px;
     
 	-fx-background-radius: 15,30;
 	-fx-background-color: linear-gradient(#00FFED, #0088BA);
@@ -79,13 +79,13 @@
 }
 #id_btn_prospects:hover{
 	-fx-pref-height: 185px; 
-    -fx-pref-width: 155px;
+    -fx-pref-width: 130px;
    
 }
 #id_btn_candidats{
 	
 	-fx-pref-height: 180px; 
-    -fx-pref-width: 150px;
+    -fx-pref-width: 130px;
     
 	-fx-background-radius: 15,30;
 	-fx-background-color: linear-gradient(#6EE2F5, #6454F0);
@@ -102,13 +102,13 @@
 }
 #id_btn_candidats:hover{
 	-fx-pref-height: 185px; 
-    -fx-pref-width: 155px;
+    -fx-pref-width: 130px;
     
 }
 #id_btn_tests{
 	
 	-fx-pref-height: 180px; 
-    -fx-pref-width: 150px;
+    -fx-pref-width: 130px;
     
 	-fx-background-radius: 15,30;
 	-fx-background-color: linear-gradient(#F869D5, #5650DE);
@@ -125,7 +125,7 @@
 }
 #id_btn_tests:hover{
 	-fx-pref-height: 185px; 
-    -fx-pref-width: 155px;
+    -fx-pref-width: 130px;
     
 }
 #id_hbox_img{
@@ -195,3 +195,4 @@
 	-fx-border-radius : 20,40;
 	-fx-effect: dropshadow(two-pass-box, white, 15, 0, 0, 0);
 }
+

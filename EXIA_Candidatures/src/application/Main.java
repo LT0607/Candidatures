@@ -13,7 +13,7 @@ public class Main extends Application {
 		try {
 			//BorderPane root = new BorderPane();
 			Parent root = FXMLLoader.load(getClass().getResource("/Home.fxml"));
-			Scene scene = new Scene(root,800,600);
+			Scene scene = new Scene(root,950,650);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
 			primaryStage.setTitle("EXIA Candidature");

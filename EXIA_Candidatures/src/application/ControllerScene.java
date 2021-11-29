@@ -28,7 +28,7 @@ public class ControllerScene {
 		
 	root = FXMLLoader.load(getClass().getResource("/Prospects3.fxml"));
 		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-		scene = new Scene(root);
+		scene = new Scene(root,950,650);
 		stage.setScene(scene);
 		stage.show();
 		

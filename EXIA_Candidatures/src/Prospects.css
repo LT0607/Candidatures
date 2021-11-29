@@ -46,3 +46,12 @@
     -fx-background-color: transparent ;
     -fx-background-insets: 0 ;
 }
+
+#id_hbox_label_prospects{
+	-fx-background-color: #6454f0;
+}
+
+#id_vbox_prospects{
+	-fx-background-color: #F8F9F9;
+	-fx-effect: dropshadow(two-pass-box, #b4b4b4, 10, 0, 0, 0);
+}

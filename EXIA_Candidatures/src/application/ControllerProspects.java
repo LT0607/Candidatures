@@ -14,29 +14,10 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ListView;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
-import javafx.scene.text.Text;
+
 
 public class ControllerProspects implements Initializable {
 	
-	
-	/*@FXML
-	private ListView<String> id_listview_prospects;
-	
-	@FXML
-	private Label ProspectsLabel;
-	
-	String[] Prospects = {"prospects1", "prospects2", "prospects3", "prospects4"};
-	
-	@Override
-	public void initialize(URL arg0, ResourceBundle arg1) {
-		
-		id_listview_prospects.getItems().addAll(Prospects);
-		
-	}*/
-	
-
 	
     @FXML
 	ListView<String> id_listview_prospects;
@@ -51,21 +32,18 @@ public class ControllerProspects implements Initializable {
 		
 	    try {
 	    	
-	    	
-	    	 //Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/exia","root","password");  ;
-	 		
 		     Statement stmt = Connexion.getCon().createStatement();
-		     ResultSet rs = stmt.executeQuery("SELECT nom FROM prospects");
+		     ResultSet rs = stmt.executeQuery("SELECT nom, prenom FROM prospects");
 	         while (rs.next()) {
-	        	 items.add(rs.getString("nom"));
-	             System.out.println(rs.getString("nom"));
-	             
+	        	 items.add(rs.getString("nom")+ "   " + rs.getString("prenom"));
+	             System.out.println(rs.getString("nom")+ "   " +rs.getString("prenom"));
 	         }
+	         String r = id_listview_prospects.getItems().get(0);
+	         System.out.println("le premier element est : "+ r);
+	       //  String selected_item = id_listview_prospects.getSelectionModel().getSelectedItem();
 	     } catch (SQLException e) {
 
 	     }
-		
-	}
-	
+	 }
 	
 }
