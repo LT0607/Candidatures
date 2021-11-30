@@ -1,3 +1,4 @@
+/*return button */
 
 #btn_retour_prospects {
 	-fx-pref-height: 30.0px;
@@ -13,6 +14,8 @@
 #btn_retour_prospects:hover {
  -fx-effect: dropshadow(two-pass-box, #b4b4b4, 10, 0, 0, 0);
  }
+ /*List Design */
+ 
 #ProspectsListView {
 	-fx-background-color: transparent ;
 	-fx-background-insets: 0px;
@@ -23,7 +26,7 @@
   
     -fx-border-width: 2px;
     
-    -fx-font-size: 14px;
+    -fx-font-size: 13px;
 }
 
 .list-cell:filled:selected:focused, .list-cell:filled:selected {
@@ -46,6 +49,7 @@
     -fx-background-color: transparent ;
     -fx-background-insets: 0 ;
 }
+/*form Design */
 
 #id_hbox_label_prospects{
 	-fx-background-color: #6454f0;
@@ -54,4 +58,69 @@
 #id_vbox_prospects{
 	-fx-background-color: #F8F9F9;
 	-fx-effect: dropshadow(two-pass-box, #b4b4b4, 10, 0, 0, 0);
+}
+#id_btn_modif{
+	-fx-pref-height: 35px;
+    -fx-pref-width: 35px;
+    -fx-background-size: 23px 23px;
+	-fx-background-image: url(modif.png);
+	 -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-border-color:transparent;
+    -fx-background-insets: 0;
+    -fx-background-color: transparent;
+    -fx-effect: dropshadow(two-pass-box, #b4b4b4, 10, 0, 0, 0);
+}
+#id_btn_modif:hover{
+	-fx-border-color: white ;
+	-fx-border-radius : 20,40;
+	-fx-effect: dropshadow(two-pass-box, white, 15, 0, 0, 0);
+}
+#id_btn_supp{
+	-fx-pref-height: 35px;
+    -fx-pref-width: 35px;
+    -fx-background-size: 23px 23px;
+	-fx-background-image: url(delete.png);
+	 -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-border-color:transparent;
+    -fx-background-insets: 0;
+    -fx-background-color: transparent;
+    -fx-effect: dropshadow(two-pass-box, #b4b4b4, 10, 0, 0, 0);
+}
+#id_btn_supp:hover{
+	-fx-border-color: white ;
+	-fx-border-radius : 20,40;
+	-fx-effect: dropshadow(two-pass-box, white, 15, 0, 0, 0);
+}
+#id_label_date_naiss{
+	-fx-border-color: transparent transparent #bfbfbf transparent;
+	-fx-text-fill: #595959;
+}
+#id_label_option_bac{
+	-fx-border-color: transparent transparent #bfbfbf transparent;
+	-fx-text-fill: #595959;
+}
+#id_label_niv_etude{
+	-fx-border-color: transparent transparent #bfbfbf transparent;
+	-fx-text-fill: #595959;
+}
+#id_label_tel1{
+	-fx-border-color: transparent transparent #bfbfbf transparent;
+	-fx-text-fill: #595959;
+}
+#id_label_tel2{
+	-fx-border-color: transparent transparent #bfbfbf transparent;
+	-fx-text-fill: #595959;
+}
+#id_label_email{
+	-fx-border-color: transparent transparent #bfbfbf transparent;
+	-fx-text-fill: #595959;
+}
+
+#id_label_remarque{
+	-fx-border-color: #bfbfbf ;
+	-fx-background-color: white;
+	-fx-text-fill: #595959;
+	/*-fx-border-radius : 5,5;*/
 }
