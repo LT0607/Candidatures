@@ -1,5 +1,8 @@
 package application;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.Date;
 
 public class Prospect {
@@ -8,15 +11,25 @@ public class Prospect {
 	private String nom, prenom, bac, niv_etude, email, remarque;
 	private Date dateNaissance;
 	
-	public Prospect (String n, String p, String b, Date d, int tel, String e) {
+public Prospect (String n, String p, String b, Date d, String niv_e, int t1, int t2, String e, String r) {
 		
-		this.nom = n;
-		this.prenom = p;
-		this.bac = b;
-		this.dateNaissance = d;
-		this.tel1 = tel;
-		this.email = e;
+	    setNom(n);
+	    setPrenom(p);
+	    setDateNaissance(d);
+	    setBac(b);
+	    setNivEtude(niv_e);
+	    setTel1(t1);
+	    setTel2(t2);
+	    setEmail(e);
+	    setRemarque(r);
+	}
+	
+	public Prospect (String n, String p, Date d, int t1) {
 		
+		setNom(n);
+	    setPrenom(p);
+	    setDateNaissance(d);
+	    setTel1(t1);
 	}
 	
 	/*******************getters*****************/
@@ -106,6 +119,7 @@ public class Prospect {
    
 	/******************Methods****************/
     
+
 	public void RechercherProspect(String nom, String prenom) {
 		
 	}

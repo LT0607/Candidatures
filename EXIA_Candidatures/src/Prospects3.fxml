@@ -43,7 +43,7 @@
                            <children>
                               <ImageView fitHeight="145.0" fitWidth="179.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../../../../Pictures/icones/64e5d5b490267d0507922f0fbf9afe52.png" />
+                                    <Image url="@char.png" />
                                  </image>
                               </ImageView>
                               <Rectangle fx:id="id_label_prospects" arcHeight="20.0" arcWidth="20.0" fill="#6454f0" height="34.0" layoutX="119.0" layoutY="95.0" strokeType="INSIDE" width="231.0" />
@@ -76,24 +76,18 @@
                         <HBox fx:id="id_hbox_label_prospects" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="324.0" spacing="5.0" stylesheets="@Prospects.css">
                            <children>
                               <ImageView fitHeight="49.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../../../../Pictures/icones/search_w.png" />
-                                 </image>
                                  <HBox.margin>
                                     <Insets left="10.0" top="15.0" />
                                  </HBox.margin>
+                                 <image>
+                                    <Image url="@search_w.png" />
+                                 </image>
                               </ImageView>
-                              <Label fx:id="id_label_NP_prospects" prefHeight="41.0" prefWidth="234.0" textFill="#fffefe">
-                                 <padding>
-                                    <Insets left="25.0" />
-                                 </padding>
+                              <TextField fx:id="id_label_NP_prospects" prefHeight="74.0" prefWidth="264.0" promptText="Entrez nom et prénom" stylesheets="@Prospects.css">
                                  <font>
                                     <Font size="16.0" />
                                  </font>
-                                 <HBox.margin>
-                                    <Insets top="20.0" />
-                                 </HBox.margin>
-                              </Label>
+                              </TextField>
                               <Button fx:id="id_btn_modif" mnemonicParsing="false" prefHeight="33.0" prefWidth="39.0" stylesheets="@Prospects.css">
                                  <HBox.margin>
                                     <Insets top="5.0" />
@@ -120,7 +114,7 @@
                         </HBox>
                         <HBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="324.0">
                            <children>
-                              <Label minHeight="-Infinity" minWidth="-Infinity" opacity="0.8" prefHeight="30.0" prefWidth="135.0" text="Date de naissance ">
+                              <Label fx:id="id_label_date_naiss" minHeight="-Infinity" minWidth="-Infinity" opacity="0.8" prefHeight="30.0" prefWidth="135.0" stylesheets="@Prospects.css" text="Date de naissance ">
                                  <padding>
                                     <Insets left="10.0" />
                                  </padding>
@@ -131,11 +125,7 @@
                                     <Insets left="15.0" />
                                  </HBox.margin>
                               </Label>
-                              <Label fx:id="id_label_date_naiss" opacity="0.8" prefHeight="33.0" prefWidth="200.0" stylesheets="@Prospects.css" textFill="#6454f0">
-                                 <padding>
-                                    <Insets left="10.0" />
-                                 </padding>
-                              </Label>
+                              <TextField fx:id="id_textfield_date_naiss" stylesheets="@Prospects.css" />
                            </children>
                            <VBox.margin>
                               <Insets top="20.0" />
@@ -143,7 +133,7 @@
                         </HBox>
                         <HBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="324.0">
                            <children>
-                              <Label minHeight="-Infinity" minWidth="-Infinity" opacity="0.8" prefHeight="30.0" prefWidth="135.0" text="Option du BAC ">
+                              <Label fx:id="id_label_option_bac" minHeight="-Infinity" minWidth="-Infinity" opacity="0.8" prefHeight="30.0" prefWidth="135.0" stylesheets="@Prospects.css" text="Option du BAC ">
                                  <padding>
                                     <Insets left="10.0" />
                                  </padding>
@@ -154,16 +144,12 @@
                                     <Insets left="15.0" />
                                  </HBox.margin>
                               </Label>
-                              <Label fx:id="id_label_option_bac" minHeight="-Infinity" opacity="0.8" prefHeight="30.0" prefWidth="200.0" stylesheets="@Prospects.css">
-                                 <padding>
-                                    <Insets left="10.0" />
-                                 </padding>
-                              </Label>
+                              <TextField fx:id="id_textfield_option_bac" stylesheets="@Prospects.css" />
                            </children>
                         </HBox>
                         <HBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="324.0">
                            <children>
-                              <Label minHeight="-Infinity" minWidth="-Infinity" opacity="0.8" prefHeight="30.0" prefWidth="135.0" text="Niveau d'études ">
+                              <Label fx:id="id_label_niv_etude" minHeight="-Infinity" minWidth="-Infinity" opacity="0.8" prefHeight="30.0" prefWidth="135.0" stylesheets="@Prospects.css" text="Niveau d'études ">
                                  <padding>
                                     <Insets left="10.0" />
                                  </padding>
@@ -174,19 +160,12 @@
                                     <Insets left="15.0" />
                                  </HBox.margin>
                               </Label>
-                              <Label fx:id="id_label_niv_etude" minHeight="-Infinity" opacity="0.8" prefHeight="30.0" prefWidth="200.0" stylesheets="@Prospects.css">
-                                 <padding>
-                                    <Insets left="10.0" />
-                                 </padding>
-                                 <font>
-                                    <Font size="13.0" />
-                                 </font>
-                              </Label>
+                              <TextField fx:id="id_textfield_niv_etude" stylesheets="@Prospects.css" />
                            </children>
                         </HBox>
                         <HBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="324.0">
                            <children>
-                              <Label minHeight="-Infinity" minWidth="-Infinity" opacity="0.8" prefHeight="30.0" prefWidth="135.0" text="Numéro de tel 01 ">
+                              <Label fx:id="id_label_tel1" minHeight="-Infinity" minWidth="-Infinity" opacity="0.8" prefHeight="30.0" prefWidth="135.0" stylesheets="@Prospects.css" text="Numéro de tel 01 ">
                                  <padding>
                                     <Insets left="10.0" />
                                  </padding>
@@ -197,16 +176,12 @@
                                     <Insets left="15.0" />
                                  </HBox.margin>
                               </Label>
-                              <Label fx:id="id_label_tel1" minHeight="-Infinity" opacity="0.8" prefHeight="30.0" prefWidth="200.0" stylesheets="@Prospects.css">
-                                 <padding>
-                                    <Insets left="10.0" />
-                                 </padding>
-                              </Label>
+                              <TextField fx:id="id_textfield_tel1" stylesheets="@Prospects.css" />
                            </children>
                         </HBox>
                         <HBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="324.0">
                            <children>
-                              <Label minHeight="-Infinity" minWidth="-Infinity" opacity="0.8" prefHeight="30.0" prefWidth="135.0" text="Numéro de tel 02 ">
+                              <Label fx:id="id_label_tel2" minHeight="-Infinity" minWidth="-Infinity" opacity="0.8" prefHeight="30.0" prefWidth="135.0" stylesheets="@Prospects.css" text="Numéro de tel 02 ">
                                  <padding>
                                     <Insets left="10.0" />
                                  </padding>
@@ -217,16 +192,12 @@
                                     <Insets left="15.0" />
                                  </HBox.margin>
                               </Label>
-                              <Label fx:id="id_label_tel2" minHeight="-Infinity" opacity="0.8" prefHeight="30.0" prefWidth="200.0" stylesheets="@Prospects.css">
-                                 <padding>
-                                    <Insets left="10.0" />
-                                 </padding>
-                              </Label>
+                              <TextField fx:id="id_textfield_tel2" stylesheets="@Prospects.css" />
                            </children>
                         </HBox>
                         <HBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="324.0">
                            <children>
-                              <Label minHeight="-Infinity" minWidth="-Infinity" opacity="0.8" prefHeight="30.0" prefWidth="135.0" text="Email ">
+                              <Label fx:id="id_label_email" minHeight="-Infinity" minWidth="-Infinity" opacity="0.8" prefHeight="30.0" prefWidth="135.0" stylesheets="@Prospects.css" text="Email ">
                                  <padding>
                                     <Insets left="10.0" />
                                  </padding>
@@ -237,16 +208,12 @@
                                     <Insets left="15.0" />
                                  </HBox.margin>
                               </Label>
-                              <Label fx:id="id_label_email" minHeight="-Infinity" opacity="0.8" prefHeight="30.0" prefWidth="200.0" stylesheets="@Prospects.css">
-                                 <padding>
-                                    <Insets left="10.0" />
-                                 </padding>
-                              </Label>
+                              <TextField fx:id="id_textfield_email" stylesheets="@Prospects.css" />
                            </children>
                         </HBox>
                         <HBox minWidth="-Infinity" prefHeight="102.0" prefWidth="324.0">
                            <children>
-                              <Label minHeight="-Infinity" minWidth="-Infinity" opacity="0.8" prefHeight="30.0" prefWidth="135.0" text="Remarque ">
+                              <Label fx:id="id_label_remarque" minHeight="-Infinity" minWidth="-Infinity" opacity="0.8" prefHeight="30.0" prefWidth="135.0" stylesheets="@Prospects.css" text="Remarque ">
                                  <padding>
                                     <Insets left="10.0" />
                                  </padding>
@@ -257,19 +224,30 @@
                                     <Insets left="15.0" />
                                  </HBox.margin>
                               </Label>
-                              <Label fx:id="id_label_remarque" alignment="TOP_LEFT" minHeight="-Infinity" minWidth="-Infinity" opacity="0.8" prefHeight="103.0" prefWidth="200.0" stylesheets="@Prospects.css" text="...">
-                                 <padding>
-                                    <Insets left="10.0" top="5.0" />
-                                 </padding>
-                              </Label>
+                              <TextField fx:id="id_textfield_remarque" prefHeight="101.0" prefWidth="151.0" stylesheets="@Prospects.css" />
                            </children>
                            <VBox.margin>
                               <Insets right="10.0" />
                            </VBox.margin>
                         </HBox>
+                        <Button fx:id="id_btn_sauvegarde" defaultButton="true" mnemonicParsing="false" stylesheets="@Prospects.css">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <VBox.margin>
+                              <Insets left="350.0" />
+                           </VBox.margin></Button>
                      </children></VBox>
                </children>
             </HBox>
          </center></BorderPane>
+      <Button fx:id="id_btn_ajout_prospect" layoutX="766.0" mnemonicParsing="false" prefWidth="154.0" stylesheets="@Prospects.css" text="Ajouter un prospect" AnchorPane.leftAnchor="780.0" AnchorPane.topAnchor="590.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <padding>
+            <Insets left="15.0" />
+         </padding>
+      </Button>
    </children>
 </AnchorPane>

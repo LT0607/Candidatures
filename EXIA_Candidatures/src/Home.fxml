@@ -62,7 +62,7 @@
                                     <Cursor fx:constant="HAND" />
                                  </cursor>
                               </Button>
-                              <Button fx:id="id_btn_candidats" alignment="BOTTOM_CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="187.0" prefWidth="126.0" stylesheets="@Home.css" text="Candidats">
+                              <Button fx:id="id_btn_candidats" alignment="BOTTOM_CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#SwitchToCandidats" prefHeight="187.0" prefWidth="126.0" stylesheets="@Home.css" text="Candidats">
                                  <HBox.margin>
                                     <Insets top="10.0" />
                                  </HBox.margin>

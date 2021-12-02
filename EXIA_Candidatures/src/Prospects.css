@@ -93,34 +93,77 @@
 	-fx-border-radius : 20,40;
 	-fx-effect: dropshadow(two-pass-box, white, 15, 0, 0, 0);
 }
-#id_label_date_naiss{
+#id_btn_sauvegarde{
+	-fx-pref-height: 35px;
+    -fx-pref-width: 35px;
+    -fx-background-size: 23px 23px;
+	-fx-background-image: url(save3.png);
+	 -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-border-color:transparent;
+    -fx-background-insets: 0;
+    -fx-background-color: #6454f0;
+    
+}
+#id_btn_sauvegarde:hover{
+	-fx-effect: dropshadow(two-pass-box, #b4b4b4, 15, 0, 0, 0);
+}
+#id_label_NP_prospects{
+	-fx-background-color: transparent;
+	-fx-text-fill: white;
+}
+#id_textfield_date_naiss{
+	-fx-background-color: transparent;
 	-fx-border-color: transparent transparent #bfbfbf transparent;
 	-fx-text-fill: #595959;
 }
-#id_label_option_bac{
+#id_textfield_option_bac{
+	-fx-background-color: transparent;
 	-fx-border-color: transparent transparent #bfbfbf transparent;
 	-fx-text-fill: #595959;
 }
-#id_label_niv_etude{
+#id_textfield_niv_etude{
+	-fx-background-color: transparent;
 	-fx-border-color: transparent transparent #bfbfbf transparent;
 	-fx-text-fill: #595959;
 }
-#id_label_tel1{
+#id_textfield_tel1{
+	-fx-background-color: transparent;
 	-fx-border-color: transparent transparent #bfbfbf transparent;
 	-fx-text-fill: #595959;
 }
-#id_label_tel2{
+#id_textfield_tel2{
+	-fx-background-color: transparent;
 	-fx-border-color: transparent transparent #bfbfbf transparent;
 	-fx-text-fill: #595959;
 }
-#id_label_email{
+#id_textfield_email{
+	-fx-background-color: transparent;
 	-fx-border-color: transparent transparent #bfbfbf transparent;
 	-fx-text-fill: #595959;
 }
 
-#id_label_remarque{
+#id_textfield_remarque{
+	
 	-fx-border-color: #bfbfbf ;
-	-fx-background-color: white;
+	-fx-background-color: transparent;
 	-fx-text-fill: #595959;
 	/*-fx-border-radius : 5,5;*/
+}
+#id_btn_ajout_prospect{
+	-fx-pref-height: 35.0px;
+    -fx-pref-width: 140.0px;
+	-fx-background-color: #6454f0;
+	-fx-background-image: url(add-prosp.png);
+	-fx-background-repeat: no-repeat;
+    -fx-background-position: left;
+    -fx-background-size: 23px 23px;
+    -fx-background-insets: 0;
+	-fx-text-fill: white;
+}
+#id_btn_ajout_prospect:hover{
+	-fx-pref-height: 36.0px;
+    -fx-pref-width: 142.0px;
+	-fx-effect: dropshadow(two-pass-box, #b4b4b4, 15, 0, 0, 0);
+	
 }
