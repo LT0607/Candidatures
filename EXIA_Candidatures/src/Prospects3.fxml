@@ -249,5 +249,13 @@
             <Insets left="15.0" />
          </padding>
       </Button>
+      <Button fx:id="id_btn_sauvegarde_c" defaultButton="true" mnemonicParsing="false" prefWidth="115.0" stylesheets="@Prospects.css" text="Ajouter" textFill="WHITE" AnchorPane.leftAnchor="740.0" AnchorPane.topAnchor="531.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

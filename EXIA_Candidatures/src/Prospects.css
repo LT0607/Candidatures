@@ -167,3 +167,17 @@
 	-fx-effect: dropshadow(two-pass-box, #b4b4b4, 15, 0, 0, 0);
 	
 }
+#id_btn_sauvegarde_c{
+	-fx-pref-height: 35px;
+    -fx-pref-width: 100px;
+    -fx-background-size: 23px 23px;
+	-fx-background-image: url(save3.png);
+	 -fx-background-repeat: no-repeat;
+    -fx-background-position: left;
+    -fx-border-color:transparent;
+    -fx-background-insets: 0;
+    -fx-background-color: #6454f0;
+}
+#id_btn_sauvegarde_c:hover{
+	-fx-effect: dropshadow(two-pass-box, #b4b4b4, 15, 0, 0, 0);
+}

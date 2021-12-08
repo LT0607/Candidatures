@@ -31,7 +31,7 @@ public class ControllerProspects implements Initializable {
     @FXML
 	ListView<String> id_listview_prospects;
     @FXML
-    Button id_btn_modif, id_btn_sauvegarde, id_btn_supp, id_btn_ajout_prospect;
+    Button id_btn_modif, id_btn_sauvegarde, id_btn_supp, id_btn_ajout_prospect, id_btn_sauvegarde_c;
    @FXML 
    TextField id_label_NP_prospects ,id_textfield_date_naiss, id_textfield_option_bac, id_textfield_niv_etude, id_textfield_tel1, id_textfield_tel2, id_textfield_email, id_textfield_remarque;
 
@@ -55,7 +55,6 @@ public class ControllerProspects implements Initializable {
    	id_textfield_email.setStyle("-fx-background-color:white; -fx-border-color:#6454F0; -fx-text-fill:#6454F0");
    	id_textfield_remarque.setStyle("-fx-background-color:white; -fx-border-color:#6454F0; -fx-text-fill:#6454F0");
    	
-   	id_btn_sauvegarde.setVisible(true);
 	   
 	}
    void Textfield_affiche() {
@@ -78,6 +77,7 @@ public class ControllerProspects implements Initializable {
 	   	id_textfield_remarque.setStyle("-fx-background-color:transparent; -fx-border-color:   #bfbfbf; -fx-text-fill:#595959");
 	   	
 	   	id_btn_sauvegarde.setVisible(false);
+	   	id_btn_sauvegarde_c.setVisible(false);
 		   
 		}
    void TextField_vider() {
@@ -137,11 +137,38 @@ public class ControllerProspects implements Initializable {
    }
    
    void ajouter_prospect() throws SQLException{
-	   String n = "SELECT VALUE FROM STRING_SPLIT('"+id_label_NP_prospects.getText()+"', '   ', 1) WHERE ordinal = 1";
-	   String p = "SELECT VALUE FROM STRING_SPLIT('"+id_label_NP_prospects.getText()+"', '   ', 1) WHERE ordinal = 2";
-	   String sql =  "INSERT INTO prospects VALUES nom = '"+ n+"', prenom = '"+p+"', date_naiss = '" + id_textfield_date_naiss.getText() + "', option_bac = '"+id_textfield_option_bac.getText()+"', niv_etude = '"+id_textfield_niv_etude.getText()+"'";
+	   
+	   Statement stmt = Connexion.getCon().createStatement();
+	   
+	   //to extract name
+	   //SELECT SUBSTRING_INDEX("nom1 prenom1", "   ", 1)
+	   
+	   String NomPrenom = id_label_NP_prospects.getText();
+	   String n = "SELECT SUBSTRING_INDEX('"+NomPrenom+"', '   ',1)";
+	  
+	     ResultSet rs = stmt.executeQuery(n);
+	     
+	 
+     while (rs.next()) {
+    	
+         System.out.println(rs.getString(1));
+     }
+     //to insert name
+     String sql =  "INSERT INTO prospects VALUES nom = SELECT SUBSTRING_INDEX('"+NomPrenom+"', '   ',1), prenom = p, date_naiss = '" + id_textfield_date_naiss.getText() + "', option_bac = '"+id_textfield_option_bac.getText()+"', niv_etude = '"+id_textfield_niv_etude.getText()+"', tel1='05222115'";
 	   PreparedStatement preparedStatement = Connexion.getCon().prepareStatement(sql);
-	   preparedStatement.executeUpdate();	
+	   preparedStatement.executeUpdate();
+	   
+	   //essai : INSERT INTO prospects (nom, prenom, date_naiss, option_bac, niv_etude, tel1, tel2, email, remarque) VALUES (SELECT SUBSTRING_INDEX('name   lastname', '   ',1), 'lastname', '2001-01-14', 'S', '1ere MI', '052015445', '03656454', 'emailtest@gmail.com', 'profil interessant');
+     
+     //to extract lastname
+	   //SELECT TRIM(LEADING 'nom1   ' FROM 'nom1   prenom1')
+	   
+	   String p = "SELECT TRIM(LEADING'"+NomPrenom+"', '   ', 1) ";
+	  
+	   
+	/*   String sql =  "INSERT INTO prospects VALUES nom = '"+ n+"', prenom = '"+p+"', date_naiss = '" + id_textfield_date_naiss.getText() + "', option_bac = '"+id_textfield_option_bac.getText()+"', niv_etude = '"+id_textfield_niv_etude.getText()+"'";
+	   PreparedStatement preparedStatement = Connexion.getCon().prepareStatement(sql);
+	   preparedStatement.executeUpdate();	*/
    }
 	@Override
 	  public void initialize(URL location, ResourceBundle resources) {
@@ -162,12 +189,13 @@ public class ControllerProspects implements Initializable {
 		            public void handle(ActionEvent e)
 		            {
 		            	Textfield_modif();
+		            	id_btn_sauvegarde.setVisible(true);
 		            	
 		            }
 		        };
 		        id_btn_modif.setOnAction(event_modif);
 		        
-		  //event invoked when button save is pressed
+		  //event invoked when button save update is pressed
 		    EventHandler<ActionEvent> event_save = new EventHandler<ActionEvent>() {
 		            public void handle(ActionEvent e)
 		            {
@@ -199,17 +227,27 @@ public class ControllerProspects implements Initializable {
 		        };  
 		        id_btn_supp.setOnAction(event_delete);
 		        
+		      //event invoked when button save update is pressed
+			    EventHandler<ActionEvent> event_save_c = new EventHandler<ActionEvent>() {
+			            public void handle(ActionEvent e)
+			            {
+			            	try {
+			            		ajouter_prospect();
+							} catch (SQLException e1) {
+								// TODO Auto-generated catch block
+								e1.printStackTrace();
+							}
+			            	Textfield_affiche();
+			            }
+			        };
+			 id_btn_sauvegarde_c.setOnAction(event_save_c);    
+		        
 		        EventHandler<ActionEvent> event_create = new EventHandler<ActionEvent>() {
 		            public void handle(ActionEvent e)
 		            {
 		            	Textfield_modif();
+		            	id_btn_sauvegarde_c.setVisible(true);
 		            	TextField_vider();
-		            	try {
-							ajouter_prospect();
-						} catch (SQLException e1) {
-							// TODO Auto-generated catch block
-							e1.printStackTrace();
-						}	
 		            	
 		            }
 		        };  
