@@ -9,4 +9,6 @@ module EXIA_Candidatures {
 	
 	opens application to javafx.graphics, javafx.fxml;
 	
+	exports application; 
+	
 }

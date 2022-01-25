@@ -7,6 +7,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.List;
 import java.util.ResourceBundle;
 
 import org.w3c.dom.events.MouseEvent;
@@ -20,6 +21,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.Labeled;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 
@@ -31,14 +33,42 @@ public class ControllerProspects implements Initializable {
     @FXML
 	ListView<String> id_listview_prospects;
     @FXML
-    Button id_btn_modif, id_btn_sauvegarde, id_btn_supp, id_btn_ajout_prospect, id_btn_sauvegarde_c;
+    Button id_btn_modif, id_btn_sauvegarde, id_btn_supp, id_btn_ajout_prospect, id_btn_sauvegarde_c, id_btn_recherche;
    @FXML 
-   TextField id_label_NP_prospects ,id_textfield_date_naiss, id_textfield_option_bac, id_textfield_niv_etude, id_textfield_tel1, id_textfield_tel2, id_textfield_email, id_textfield_remarque;
+   TextField id_label_NP_prospects ,id_label_NP_prospects1, id_textfield_date_naiss, id_textfield_option_bac, id_textfield_niv_etude, id_textfield_tel1, id_textfield_tel2, id_textfield_email, id_textfield_remarque, id_textfield_recherche;
+   
+   
+   //*****************************************Research**********************************
+   //*************Afficher le prospect recherché dans listview***************
+   void Recherche() throws SQLException {
+	   
+	ObservableList<String> items = FXCollections.observableArrayList();
+		
+		id_listview_prospects.setItems(items);
+	   
+	   String recherche = id_textfield_recherche.getText();
+	
+	   Statement stmt = Connexion.getCon().createStatement();
+	     String sql1 = "SELECT nom, prenom FROM prospects WHERE nom LIKE '%"+recherche+"%' OR prenom LIKE '%"+recherche+"%'";
+	     ResultSet rs = stmt.executeQuery(sql1);
+	     
+	 
+       while (rs.next()) {
+      	 items.add(rs.getString("nom")+ "   " + rs.getString("prenom"));
+           System.out.println(rs.getString("nom")+ "   " +rs.getString("prenom"));
+       }
+   }
+  
+   
+   
+   //***********************************************************************************
+   
 
   void Textfield_modif() {
 		
 	// ** Editable Form ***
-	   
+	  id_label_NP_prospects.setEditable(true);
+	  id_label_NP_prospects1.setEditable(true);
    	id_textfield_date_naiss.setEditable(true);
    	id_textfield_option_bac.setEditable(true);
    	id_textfield_niv_etude.setEditable(true);
@@ -60,6 +90,8 @@ public class ControllerProspects implements Initializable {
    void Textfield_affiche() {
 		
 		// ** Editable Form ***
+	   id_label_NP_prospects.setEditable(false);
+	   id_label_NP_prospects1.setEditable(false);
 	   	id_textfield_date_naiss.setEditable(false);
 	   	id_textfield_option_bac.setEditable(false);
 	   	id_textfield_niv_etude.setEditable(false);
@@ -82,6 +114,7 @@ public class ControllerProspects implements Initializable {
 		}
    void TextField_vider() {
 	   id_label_NP_prospects.setText(null);
+	   id_label_NP_prospects1.setText(null);
 		id_textfield_date_naiss.setText(null);
 	   	id_textfield_option_bac.setText(null);
 	   	id_textfield_niv_etude.setText(null);
@@ -98,7 +131,7 @@ public class ControllerProspects implements Initializable {
 	   
 	 }
    void delete_prospect() throws SQLException{
-	   String sql = "DELETE from prospects WHERE CONCAT(nom,'   ',prenom) = '"+id_label_NP_prospects.getText()+"'";
+	   String sql = "DELETE from prospects WHERE nom = '"+id_label_NP_prospects.getText()+"'AND prenom = '"+id_label_NP_prospects1.getText()+"'";
 	   PreparedStatement preparedStatement = Connexion.getCon().prepareStatement(sql);
 	   preparedStatement.executeUpdate();	
 	   afficher_list_prospect();
@@ -124,7 +157,9 @@ public class ControllerProspects implements Initializable {
          ResultSet rs1 = stmt.executeQuery(sql2);
          
 		 while (rs1.next()) {
-			 id_label_NP_prospects.setText(rs1.getString("nom")+ "   " +rs1.getString("prenom"));
+		//	 id_label_NP_prospects.setText(rs1.getString("nom")+ "   " +rs1.getString("prenom"));
+			 id_label_NP_prospects.setText(rs1.getString("nom"));
+			 id_label_NP_prospects1.setText(rs1.getString("prenom"));
 			 id_textfield_date_naiss.setText(rs1.getString("date_naiss"));
 			 id_textfield_option_bac.setText(rs1.getString("option_bac"));
 			 id_textfield_niv_etude.setText(rs1.getString("niv_etude"));
@@ -140,35 +175,31 @@ public class ControllerProspects implements Initializable {
 	   
 	   Statement stmt = Connexion.getCon().createStatement();
 	   
-	   //to extract name
-	   //SELECT SUBSTRING_INDEX("nom1 prenom1", "   ", 1)
-	   
-	   String NomPrenom = id_label_NP_prospects.getText();
-	   String n = "SELECT SUBSTRING_INDEX('"+NomPrenom+"', '   ',1)";
+	   String Nom = id_label_NP_prospects.getText();
+	   String Prenom = id_label_NP_prospects1.getText();
 	  
-	     ResultSet rs = stmt.executeQuery(n);
-	     
-	 
-     while (rs.next()) {
-    	
-         System.out.println(rs.getString(1));
-     }
-     //to insert name
-     String sql =  "INSERT INTO prospects VALUES nom = SELECT SUBSTRING_INDEX('"+NomPrenom+"', '   ',1), prenom = p, date_naiss = '" + id_textfield_date_naiss.getText() + "', option_bac = '"+id_textfield_option_bac.getText()+"', niv_etude = '"+id_textfield_niv_etude.getText()+"', tel1='05222115'";
+	   String sql =  "INSERT INTO prospects (nom, prenom, date_naiss, option_bac, niv_etude, tel1, tel2, email, remarque) VALUES ('"+ Nom +"','"+ Prenom +"','"+ id_textfield_date_naiss.getText() +"','"+id_textfield_option_bac.getText()+"','"+id_textfield_niv_etude.getText()+"', '"+id_textfield_tel1.getText()+"','"+id_textfield_tel2.getText()+"','"+ id_textfield_email.getText()+"', '"+id_textfield_remarque.getText()+"')";
 	   PreparedStatement preparedStatement = Connexion.getCon().prepareStatement(sql);
-	   preparedStatement.executeUpdate();
+	   preparedStatement.executeUpdate();	 
 	   
-	   //essai : INSERT INTO prospects (nom, prenom, date_naiss, option_bac, niv_etude, tel1, tel2, email, remarque) VALUES (SELECT SUBSTRING_INDEX('name   lastname', '   ',1), 'lastname', '2001-01-14', 'S', '1ere MI', '052015445', '03656454', 'emailtest@gmail.com', 'profil interessant');
-     
-     //to extract lastname
-	   //SELECT TRIM(LEADING 'nom1   ' FROM 'nom1   prenom1')
+	   afficher_list_prospect();
 	   
-	   String p = "SELECT TRIM(LEADING'"+NomPrenom+"', '   ', 1) ";
-	  
-	   
-	/*   String sql =  "INSERT INTO prospects VALUES nom = '"+ n+"', prenom = '"+p+"', date_naiss = '" + id_textfield_date_naiss.getText() + "', option_bac = '"+id_textfield_option_bac.getText()+"', niv_etude = '"+id_textfield_niv_etude.getText()+"'";
-	   PreparedStatement preparedStatement = Connexion.getCon().prepareStatement(sql);
-	   preparedStatement.executeUpdate();	*/
+	   /*  ResultSet rs = stmt.executeQuery(sql);
+	     while (rs.next()) {
+	 		
+	 			 id_label_NP_prospects.setText(rs.getString("nom"));
+	 			 id_label_NP_prospects1.setText(rs.getString("prenom"));
+	 			 id_textfield_date_naiss.setText(rs.getString("date_naiss"));
+	 			 id_textfield_option_bac.setText(rs.getString("option_bac"));
+	 			 id_textfield_niv_etude.setText(rs.getString("niv_etude"));
+	 			 id_textfield_tel1.setText(rs.getString("tel1"));
+	 			 id_textfield_tel2.setText(rs.getString("tel2"));
+	 			 id_textfield_email.setText(rs.getString("email"));
+	 			 id_textfield_remarque.setText(rs.getString("remarque"));
+	          }
+	 		 
+	 */
+
    }
 	@Override
 	  public void initialize(URL location, ResourceBundle resources) {
@@ -182,7 +213,24 @@ public class ControllerProspects implements Initializable {
 			e2.printStackTrace();
 		}
 		
-		 //**************** Update prospect ****************
+//*************************************Research **************************************************
+		 //***Appel à Recherche() si appui sur le bouton de recherche
+		   
+		   EventHandler<ActionEvent> event_recherche = new EventHandler<ActionEvent>() {
+		       public void handle(ActionEvent e)
+		       {
+		       	try {
+		       		Recherche();
+					} catch (SQLException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+		       	
+		       	
+		       }
+		   };  
+		   id_btn_recherche.setOnAction(event_recherche);
+//************************************* Update prospect ********************************************
 		  //event invoked when button modify is pressed
 		 
 			EventHandler<ActionEvent> event_modif = new EventHandler<ActionEvent>() {
@@ -254,24 +302,35 @@ public class ControllerProspects implements Initializable {
 		        id_btn_ajout_prospect.setOnAction(event_create);
 	
 	    id_listview_prospects.getSelectionModel().selectedItemProperty().addListener((ObservableValue<? extends String> ov, String old_val, String new_val) -> {
-				 String selectedItem = id_listview_prospects.getSelectionModel().getSelectedItem();
+				// String selectedItem = id_listview_prospects.getSelectionModel().getSelectedItem();
 				
+//*********************************** Separate first name and last name			 
+				 String item = id_listview_prospects.getSelectionModel().getSelectedItem();
+				 System.out.println(item);
+				 String[] array = item.split("   ", 2);
+				 
+			          //  System.out.println(array[0]);
+			            //System.out.println(array[1]);
+				 id_label_NP_prospects.setText(array[0]);
+				 id_label_NP_prospects1.setText(array[1]);
+				 
 				 Textfield_affiche();
 				 
 				 try {
 					 
 				 Statement stmt = Connexion.getCon().createStatement();
-				 String sql3 = "SELECT * FROM prospects WHERE CONCAT(nom,'   ',prenom) = '"+selectedItem+"'";
+				// String sql3 = "SELECT * FROM prospects WHERE CONCAT(nom,'   ',prenom) = '"+selectedItem+"'";
+				 String sql3 = "SELECT * FROM prospects WHERE nom = '"+array[0]+"' AND prenom = '"+array[1]+"'";
 				  
 				
 					
 				ResultSet rs2 = stmt.executeQuery(sql3);
 				 while (rs2.next()) {
-					 String n = rs2.getString("nom");
-					 String p =rs2.getString("prenom");
+					 //String n = rs2.getString("nom");
+					 //String p =rs2.getString("prenom");
 					
 					 
-					 id_label_NP_prospects.setText(n+ "   " +p);
+					// id_label_NP_prospects.setText(n+ "   " +p);
 					 id_textfield_date_naiss.setText(rs2.getString("date_naiss"));
 					 id_textfield_option_bac.setText(rs2.getString("option_bac"));
 					 id_textfield_niv_etude.setText(rs2.getString("niv_etude"));

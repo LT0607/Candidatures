@@ -112,6 +112,11 @@
 	-fx-background-color: transparent;
 	-fx-text-fill: white;
 }
+#id_label_NP_prospects1{
+	-fx-background-color: transparent;
+	-fx-text-fill: white;
+}
+
 #id_textfield_date_naiss{
 	-fx-background-color: transparent;
 	-fx-border-color: transparent transparent #bfbfbf transparent;
@@ -150,6 +155,24 @@
 	-fx-text-fill: #595959;
 	/*-fx-border-radius : 5,5;*/
 }
+
+
+#id_btn_recherche{
+	-fx-pref-height: 25.0px;
+    -fx-pref-width: 25.0px;
+	-fx-background-color: #6454f0;
+	-fx-background-image: url(search.png);
+	-fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-size: 20px 20px;
+    -fx-background-insets: 0;
+}
+#id_btn_recherche:hover{
+	-fx-pref-height: 28.0px;
+    -fx-pref-width: 28.0px;
+	-fx-effect: dropshadow(two-pass-box, #b4b4b4, 15, 0, 0, 0);
+}
+
 #id_btn_ajout_prospect{
 	-fx-pref-height: 35.0px;
     -fx-pref-width: 140.0px;

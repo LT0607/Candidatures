@@ -53,13 +53,26 @@
                                  </font>
                               </Text>
                            </children></AnchorPane>
-                        <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="268.0" promptText="Recherche" stylesheets="@Home.css">
-                           <VBox.margin>
-                              <Insets left="15.0" />
-                           </VBox.margin>
-                           <cursor>
-                              <Cursor fx:constant="TEXT" />
-                           </cursor></TextField>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <TextField fx:id="id_textfield_recherche" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="268.0" promptText="Recherche" stylesheets="@Home.css">
+                                 <cursor>
+                                    <Cursor fx:constant="TEXT" />
+                                 </cursor>
+                                 <HBox.margin>
+                                    <Insets left="15.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <Button fx:id="id_btn_recherche" mnemonicParsing="false" stylesheets="@Prospects.css">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
                         <ListView fx:id="id_listview_prospects" prefHeight="389.0" prefWidth="405.0" stylesheets="@Prospects.css">
                            <VBox.margin>
                               <Insets bottom="70.0" left="15.0" right="30.0" />
@@ -83,7 +96,12 @@
                                     <Image url="@search_w.png" />
                                  </image>
                               </ImageView>
-                              <TextField fx:id="id_label_NP_prospects" prefHeight="74.0" prefWidth="264.0" promptText="Entrez nom et prénom" stylesheets="@Prospects.css">
+                              <TextField fx:id="id_label_NP_prospects" prefHeight="74.0" prefWidth="135.0" promptText="Entrez nom " stylesheets="@Prospects.css">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="id_label_NP_prospects1" prefHeight="74.0" prefWidth="135.0" promptText="Entrez prénom" stylesheets="@Prospects.css">
                                  <font>
                                     <Font size="16.0" />
                                  </font>
@@ -230,7 +248,7 @@
                               <Insets right="10.0" />
                            </VBox.margin>
                         </HBox>
-                        <Button fx:id="id_btn_sauvegarde" defaultButton="true" mnemonicParsing="false" stylesheets="@Prospects.css">
+                        <Button fx:id="id_btn_sauvegarde" defaultButton="true" mnemonicParsing="false" stylesheets="@Prospects.css" visible="false">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
@@ -249,7 +267,7 @@
             <Insets left="15.0" />
          </padding>
       </Button>
-      <Button fx:id="id_btn_sauvegarde_c" defaultButton="true" mnemonicParsing="false" prefWidth="115.0" stylesheets="@Prospects.css" text="Ajouter" textFill="WHITE" AnchorPane.leftAnchor="740.0" AnchorPane.topAnchor="531.0">
+      <Button fx:id="id_btn_sauvegarde_c" defaultButton="true" mnemonicParsing="false" prefWidth="115.0" stylesheets="@Prospects.css" text="Ajouter" textFill="WHITE" visible="false" AnchorPane.leftAnchor="740.0" AnchorPane.topAnchor="531.0">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
